@@ -1,3 +1,4 @@
 docker build -t darkos/hjug-springboot-web:v1 .
 docker run -d --name hjug-springweb --link hjug-mysql:mysql -p 8080:8080 -e ACTIVE_PROFILE=dockerizedmaria darkos/hjug-springboot-web:v1
- 
+---
+docker run -d --name hjug-springweb --link hjug-postgres:postgres -p 8080:8080 -e ACTIVE_PROFILE=dockerizedpostgres darkos/hjug-springboot-web:v1
